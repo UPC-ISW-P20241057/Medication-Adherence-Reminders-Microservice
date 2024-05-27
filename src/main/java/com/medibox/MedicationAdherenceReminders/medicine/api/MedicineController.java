@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("medicines")
+@RequestMapping("api/v1/medicines")
 public class MedicineController {
   private final MedicineService medicineService;
   private final MedicineMapper mapper;
