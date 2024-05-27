@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("frequencies")
+@RequestMapping("api/v1/frequencies")
 @AllArgsConstructor
 public class FrequencyController {
   private final FrequencyService frequencyService;

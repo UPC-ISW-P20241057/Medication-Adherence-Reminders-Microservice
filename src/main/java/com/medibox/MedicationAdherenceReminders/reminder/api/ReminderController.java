@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("reminders")
+@RequestMapping("api/v1/reminders")
 public class ReminderController {
   private final ReminderService reminderService;
   private final ReminderMapper mapper;

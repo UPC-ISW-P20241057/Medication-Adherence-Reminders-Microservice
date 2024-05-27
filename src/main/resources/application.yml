@@ -12,7 +12,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/medication-adherence
     username: postgres
-    password: admin
+    password: 12345
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     database: postgresql

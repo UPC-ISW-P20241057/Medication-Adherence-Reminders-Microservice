@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("intervals")
+@RequestMapping("api/v1/intervals")
 @AllArgsConstructor
 public class IntervalController {
   private final IntervalService intervalService;
