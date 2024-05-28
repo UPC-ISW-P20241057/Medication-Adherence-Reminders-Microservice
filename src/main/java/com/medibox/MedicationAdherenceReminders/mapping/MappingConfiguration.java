@@ -1,4 +1,4 @@
-package com.medibox.MedicationAdherenceReminders.shared.mapping;
+package com.medibox.MedicationAdherenceReminders.mapping;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -4,9 +4,7 @@ import com.medibox.MedicationAdherenceReminders.interval.domain.model.entity.Int
 import com.medibox.MedicationAdherenceReminders.interval.resource.CreateIntervalResource;
 import com.medibox.MedicationAdherenceReminders.interval.resource.IntervalResource;
 import com.medibox.MedicationAdherenceReminders.interval.resource.UpdateIntervalResource;
-import com.medibox.MedicationAdherenceReminders.medicine.resource.CreateMedicineResource;
-import com.medibox.MedicationAdherenceReminders.medicine.resource.UpdateMedicineResource;
-import com.medibox.MedicationAdherenceReminders.shared.mapping.EnhancedModelMapper;
+import com.medibox.MedicationAdherenceReminders.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;

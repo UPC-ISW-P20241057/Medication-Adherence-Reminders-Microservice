@@ -4,7 +4,7 @@ import com.medibox.MedicationAdherenceReminders.frequency.domain.model.entity.Fr
 import com.medibox.MedicationAdherenceReminders.frequency.resource.CreateFrequencyResource;
 import com.medibox.MedicationAdherenceReminders.frequency.resource.FrequencyResource;
 import com.medibox.MedicationAdherenceReminders.frequency.resource.UpdateFrequencyResource;
-import com.medibox.MedicationAdherenceReminders.shared.mapping.EnhancedModelMapper;
+import com.medibox.MedicationAdherenceReminders.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
