@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration("reminderMappingConfiguration")
-public class MappingConfiguration {
+public class ReminderMappingConfiguration {
   @Bean
   public ReminderMapper reminderMapper(){
     return new ReminderMapper();
