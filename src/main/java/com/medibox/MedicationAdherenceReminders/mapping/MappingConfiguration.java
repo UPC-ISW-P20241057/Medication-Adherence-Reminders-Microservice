@@ -1,4 +1,4 @@
-﻿package com.medibox.MedicationAdherenceReminders.mapping;
+package com.medibox.MedicationAdherenceReminders.mapping;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +8,7 @@ public class MappingConfiguration {
     @Bean
     public FrequencyMapper frequencyMapper(){
         return new FrequencyMapper();
-    }
+    } 
     @Bean
     public EnhancedModelMapper modelMapper() {
         return new EnhancedModelMapper();
