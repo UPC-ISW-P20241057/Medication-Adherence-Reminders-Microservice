@@ -9,9 +9,9 @@ logging:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/medication_database
-    username: postgres
-    password: 12345
+    url: jdbc:postgresql://azure-mau-postgre.postgres.database.azure.com:5432/medication_database
+    username: mau
+    password: Li@nel2022
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     database: postgresql
