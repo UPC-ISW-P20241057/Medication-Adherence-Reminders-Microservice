@@ -8,21 +8,21 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "intervals")
+@Table(name = "reminder_intervals")
 public class Interval {
   @Id
-  private Long reminderId;
-
-  @MapsId
-  @OneToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "reminder_id", nullable = false)
-  private Reminder reminder;
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
   @NotNull
   @Column(name = "interval_type", length = 15)
   private String intervalType;
 
   @NotNull
-  @Column(name = "interval")
+  @Column(name = "interval_value")
   private Integer interval;
+
+  @OneToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "reminder_id", nullable = false)
+  private Reminder reminder;
 }

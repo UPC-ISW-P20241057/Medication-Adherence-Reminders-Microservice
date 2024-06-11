@@ -26,8 +26,8 @@ public class ReminderController {
   }
 
   @GetMapping
-  public List<Reminder> getAll() {
-    return reminderService.getAll();
+  public List<ReminderResource> getAll() {
+    return mapper.toResourceList(reminderService.getAll());
   }
 
   @GetMapping("{id}")

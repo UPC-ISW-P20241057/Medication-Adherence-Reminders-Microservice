@@ -26,8 +26,8 @@ public class MedicineController {
   }
 
   @GetMapping
-  public List<Medicine> getAll() {
-    return medicineService.getAll();
+  public List<MedicineResource> getAll() {
+    return mapper.toResourceList(medicineService.getAll());
   }
 
   @GetMapping("{id}")

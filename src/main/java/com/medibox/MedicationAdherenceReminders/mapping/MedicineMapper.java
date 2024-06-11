@@ -7,6 +7,7 @@ import com.medibox.MedicationAdherenceReminders.resource.UpdateMedicineResource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class MedicineMapper implements Serializable {
   @Autowired
@@ -20,5 +21,8 @@ public class MedicineMapper implements Serializable {
   }
   public MedicineResource toResource(Medicine medicine) {
     return this.mapper.map(medicine, MedicineResource.class);
+  }
+  public List<MedicineResource> toResourceList(List<Medicine> medicines) {
+    return this.mapper.mapList(medicines, MedicineResource.class);
   }
 }

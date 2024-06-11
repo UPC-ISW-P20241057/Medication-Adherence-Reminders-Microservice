@@ -11,12 +11,8 @@ import lombok.Setter;
 @Table(name = "frequencies")
 public class Frequency {
   @Id
-  private Long reminderId;
-
-  @OneToOne(fetch = FetchType.LAZY)
-  @MapsId
-  @JoinColumn(name = "reminder_id", nullable = false)
-  private Reminder reminder;
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
   @NotNull
   @Column(name = "frequency_type", length = 15)
@@ -25,4 +21,8 @@ public class Frequency {
   @NotNull
   @Column(name = "times")
   private Integer times;
+
+  @OneToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "reminder_id", nullable = false)
+  private Reminder reminder;
 }

@@ -1,5 +1,6 @@
 package com.medibox.MedicationAdherenceReminders.domain.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -23,7 +24,7 @@ public class Medicine {
   @NotNull
   @Column(name = "type", length = 10)
   private String type;
-
+  
   @OneToMany(mappedBy = "medicine", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<Reminder> reminders;
 }

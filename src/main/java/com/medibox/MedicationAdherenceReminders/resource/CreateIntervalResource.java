@@ -13,7 +13,10 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateIntervalResource {
-
+  
+  @NotNull
+  private Long reminderId;
+  
   @NotNull
   private String intervalType;
 

@@ -9,6 +9,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateFrequencyResource {
+  @NotNull
+  private Long reminderId;
 
   @NotNull
   private String frequencyType;

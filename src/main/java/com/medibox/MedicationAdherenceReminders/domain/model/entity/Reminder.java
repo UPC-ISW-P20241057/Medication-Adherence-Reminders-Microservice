@@ -28,7 +28,7 @@ public class Reminder {
 
   @Column(name = "end_date")
   private Date endDate;
-
+  
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "medicine_id", nullable = false)
   private Medicine medicine;
@@ -37,9 +37,9 @@ public class Reminder {
   @Column(name = "user_id")
   private Long userId;
 
-  @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "reminder")
-  private Interval interval;
-
-  @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "reminder")
+  @OneToOne(mappedBy = "reminder", cascade = CascadeType.ALL)
   private Frequency frequency;
+
+  @OneToOne(mappedBy = "reminder", cascade = CascadeType.ALL)
+  private Interval interval;
 }

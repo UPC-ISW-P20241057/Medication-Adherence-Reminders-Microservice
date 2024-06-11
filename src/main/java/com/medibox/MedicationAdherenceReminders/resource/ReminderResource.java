@@ -21,8 +21,11 @@ public class ReminderResource {
   private Date endDate;
 
   @NotNull
-  private Long medicineId;
+  private MedicineResource medicine;
 
   @NotNull
   private Long userId;
+  
+  private FrequencyResource frequency;
+  private IntervalResource interval;
 }
