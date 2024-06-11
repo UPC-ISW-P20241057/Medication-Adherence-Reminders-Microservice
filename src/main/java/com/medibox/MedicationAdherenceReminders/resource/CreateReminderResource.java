@@ -24,4 +24,6 @@ public class CreateReminderResource {
 
   @NotNull
   private Long userId;
+
+  private Boolean consumeFood;
 }

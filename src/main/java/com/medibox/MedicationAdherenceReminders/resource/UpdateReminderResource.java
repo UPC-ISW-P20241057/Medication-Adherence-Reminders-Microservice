@@ -26,4 +26,5 @@ public class UpdateReminderResource {
   @NotNull
   private Long userId;
 
+  private Boolean consumeFood;
 }

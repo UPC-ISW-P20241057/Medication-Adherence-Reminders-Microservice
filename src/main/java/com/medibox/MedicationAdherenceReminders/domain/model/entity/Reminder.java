@@ -42,4 +42,7 @@ public class Reminder {
 
   @OneToOne(mappedBy = "reminder", cascade = CascadeType.ALL)
   private Interval interval;
+  
+  @Column(name = "consume_food")
+  private Boolean consumeFood;
 }

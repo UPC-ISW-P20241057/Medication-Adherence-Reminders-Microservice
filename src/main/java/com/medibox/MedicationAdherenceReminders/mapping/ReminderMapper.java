@@ -25,6 +25,7 @@ public class ReminderMapper implements Serializable {
     reminder.setEndDate(resource.getEndDate());
     reminder.setMedicine(medicineRepository.getById(resource.getMedicineId()));
     reminder.setUserId(resource.getUserId());
+    reminder.setConsumeFood(resource.getConsumeFood());
     return reminder;
   }
   public Reminder toModel(UpdateReminderResource resource) {
@@ -35,6 +36,7 @@ public class ReminderMapper implements Serializable {
     reminder.setEndDate(resource.getEndDate());
     reminder.setMedicine(medicineRepository.getById(resource.getMedicineId()));
     reminder.setUserId(resource.getUserId());
+    reminder.setConsumeFood(resource.getConsumeFood());
     return reminder;
   }
   public ReminderResource toResource(Reminder reminder) {
