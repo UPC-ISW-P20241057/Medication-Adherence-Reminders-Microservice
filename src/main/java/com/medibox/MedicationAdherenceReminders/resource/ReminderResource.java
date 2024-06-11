@@ -28,4 +28,6 @@ public class ReminderResource {
   
   private FrequencyResource frequency;
   private IntervalResource interval;
+
+  private Boolean consumeFood;
 }
