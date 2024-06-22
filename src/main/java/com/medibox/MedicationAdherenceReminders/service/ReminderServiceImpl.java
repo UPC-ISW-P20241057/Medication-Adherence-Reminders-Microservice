@@ -21,6 +21,11 @@ public class ReminderServiceImpl implements ReminderService {
   }
 
   @Override
+  public List<Reminder> getAllByUserId(Long userId) {
+    return reminderRepository.findAllByUserId(userId);
+  }
+
+  @Override
   public Optional<Reminder> getById(Long id) {
     return reminderRepository.findById(id);
   }

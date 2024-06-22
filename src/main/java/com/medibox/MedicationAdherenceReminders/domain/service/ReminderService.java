@@ -7,6 +7,7 @@ import java.util.Optional;
 
 public interface ReminderService {
   List<Reminder> getAll();
+  List<Reminder> getAllByUserId(Long userId);
   Optional<Reminder> getById(Long id);
   Reminder save (Reminder reminder);
   Reminder update (Reminder reminder);
