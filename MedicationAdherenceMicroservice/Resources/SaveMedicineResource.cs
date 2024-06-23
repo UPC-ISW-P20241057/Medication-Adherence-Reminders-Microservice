@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MedicationAdherenceMicroservice.Domain.Resources;
+namespace MedicationAdherenceMicroservice.Resources;
 
 public class SaveMedicineResource
 {

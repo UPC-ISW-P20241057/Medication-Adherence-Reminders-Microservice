@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedicationAdherenceMicroservice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b968d9c2a1242524e56727349d4f7d56acde583")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6189d3913c4f5848909411f24474591a487c5d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedicationAdherenceMicroservice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedicationAdherenceMicroservice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

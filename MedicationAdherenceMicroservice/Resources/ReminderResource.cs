@@ -1,4 +1,4 @@
-﻿namespace MedicationAdherenceMicroservice.Domain.Resources;
+﻿namespace MedicationAdherenceMicroservice.Resources;
 
 public class ReminderResource
 {

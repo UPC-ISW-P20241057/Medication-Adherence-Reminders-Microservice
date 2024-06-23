@@ -23,6 +23,12 @@ public class MedicineRepository(AppDbContext context) : BaseRepository(context),
             .FirstOrDefaultAsync(p => p.Id == id);
     }
 
+    public async Task<Medicine> FindByNameAsync(string name)
+    {
+        return await _context.Medicines
+            .FirstOrDefaultAsync(p => p.Name == name);
+    }
+
     public void Update(Medicine medicine)
     {
         _context.Medicines.Update(medicine);

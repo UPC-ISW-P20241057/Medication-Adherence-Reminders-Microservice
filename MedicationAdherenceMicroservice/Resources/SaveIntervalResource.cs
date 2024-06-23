@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MedicationAdherenceMicroservice.Domain.Resources;
+namespace MedicationAdherenceMicroservice.Resources;
 
 public class SaveIntervalResource
 {
@@ -8,4 +8,6 @@ public class SaveIntervalResource
     public string IntervalType { get; set; }
     [Required]
     public int Value { get; set; }
+    [Required]
+    public long ReminderId { get; set; }
 }

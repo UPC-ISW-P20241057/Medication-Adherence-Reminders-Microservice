@@ -1,4 +1,5 @@
 ﻿using MedicationAdherenceMicroservice.Domain.Models;
+using MedicationAdherenceMicroservice.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace MedicationAdherenceMicroservice.Persistence.Context;
@@ -52,5 +53,7 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         builder.Entity<Reminder>().HasOne(p => p.Frequency)
             .WithOne(p => p.Reminder)
             .HasForeignKey<Frequency>(p => p.ReminderId);
+        
+        builder.UseSnakeCaseNamingConvention();
     }
 }
