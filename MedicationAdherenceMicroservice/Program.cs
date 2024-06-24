@@ -35,6 +35,8 @@ builder.Services.AddScoped<IMedicineService, MedicineService>();
 builder.Services.AddScoped<IReminderService, ReminderService>();
 builder.Services.AddScoped<IIntervalService, IntervalService>();
 builder.Services.AddScoped<IFrequencyService, FrequencyService>();
+builder.Services.AddScoped<IConflictingMedicinesRepository, ConflictingMedicinesRepository>();
+builder.Services.AddScoped<IConflictingMedicinesService, ConflictingMedicinesService>();
 
 builder.Services.AddAutoMapper(
     typeof(ModelToResourceProfile),

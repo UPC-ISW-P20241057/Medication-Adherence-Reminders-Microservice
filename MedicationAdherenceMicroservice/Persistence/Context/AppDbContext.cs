@@ -10,6 +10,7 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
     public DbSet<Reminder> Reminders { get; set; }
     public DbSet<Interval> Intervals { get; set; }
     public DbSet<Frequency> Frequencies { get; set; }
+    public DbSet<ConflictingMedicines> ConflictingMedicinesDbSet { get; set; }
     
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -42,6 +43,14 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         builder.Entity<Frequency>().Property(p => p.Times).IsRequired();
         builder.Entity<Frequency>().Property(p => p.ReminderId).IsRequired();
 
+        builder.Entity<ConflictingMedicines>().ToTable("ConflictingMedicines");
+        builder.Entity<ConflictingMedicines>().HasKey(p => p.Id);
+        builder.Entity<ConflictingMedicines>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<ConflictingMedicines>().Property(p => p.Medicine1Id).IsRequired();
+        builder.Entity<ConflictingMedicines>().Property(p => p.Medicine1Name).IsRequired();
+        builder.Entity<ConflictingMedicines>().Property(p => p.Medicine2Id).IsRequired();
+        builder.Entity<ConflictingMedicines>().Property(p => p.Medicine2Name).IsRequired();
+        
         builder.Entity<Medicine>().HasMany(p => p.Reminders)
             .WithOne(p => p.Medicine)
             .HasForeignKey(p => p.MedicineId);
@@ -53,6 +62,16 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         builder.Entity<Reminder>().HasOne(p => p.Frequency)
             .WithOne(p => p.Reminder)
             .HasForeignKey<Frequency>(p => p.ReminderId);
+
+        /*builder.Entity<Medicine>().HasMany(p => p.ConflictedMedicines)
+            .WithMany(p => p.ConflictedMedicines)
+            .UsingEntity<ConflictingMedicines>(
+                l => l.HasOne<Medicine>(e => e.Medicine1)
+                    .WithMany()
+                    .HasForeignKey(e => e.Medicine1Id),
+                r => r.HasOne<Medicine>(r => r.Medicine2)
+                    .WithMany()
+                    .HasForeignKey(e => e.Medicine2Id));*/
         
         builder.UseSnakeCaseNamingConvention();
     }

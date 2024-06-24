@@ -12,5 +12,6 @@ public class ResourceToModelProfile: Profile
         CreateMap<SaveReminderResource, Reminder>();
         CreateMap<SaveIntervalResource, Interval>();
         CreateMap<SaveFrequencyResource, Frequency>();
+        CreateMap<SaveConflictingMedicinesResource, ConflictingMedicines>();
     }
 }
