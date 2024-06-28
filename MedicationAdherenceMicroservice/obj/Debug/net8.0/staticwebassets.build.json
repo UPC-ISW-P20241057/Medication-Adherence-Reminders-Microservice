@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "iM89+l4dhpltgAvLeQ+WiWIWEI6VvcQQhcafXdwYFNo=",
+  "Source": "MedicationAdherenceMicroservice",
+  "BasePath": "_content/MedicationAdherenceMicroservice",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
