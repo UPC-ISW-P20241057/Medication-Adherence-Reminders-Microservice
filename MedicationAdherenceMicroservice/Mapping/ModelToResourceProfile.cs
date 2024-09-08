@@ -13,5 +13,7 @@ public class ModelToResourceProfile: Profile
         CreateMap<Interval, IntervalResource>();
         CreateMap<Frequency, FrequencyResource>();
         CreateMap<ConflictingMedicines, ConflictingMedicinesResource>();
+        CreateMap<CompletedAlarm, AlarmResource>();
+        CreateMap<MissedAlarm, AlarmResource>();
     }
 }

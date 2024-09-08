@@ -37,6 +37,10 @@ builder.Services.AddScoped<IIntervalService, IntervalService>();
 builder.Services.AddScoped<IFrequencyService, FrequencyService>();
 builder.Services.AddScoped<IConflictingMedicinesRepository, ConflictingMedicinesRepository>();
 builder.Services.AddScoped<IConflictingMedicinesService, ConflictingMedicinesService>();
+builder.Services.AddScoped<ICompletedAlarmRepository, CompletedAlarmRepository>();
+builder.Services.AddScoped<ICompletedAlarmService, CompletedAlarmService>();
+builder.Services.AddScoped<IMissedAlarmRepository, MissedAlarmRepository>();
+builder.Services.AddScoped<IMissedAlarmService, MissedAlarmService>();
 
 builder.Services.AddAutoMapper(
     typeof(ModelToResourceProfile),
