@@ -12,6 +12,9 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
     public DbSet<Frequency> Frequencies { get; set; }
     public DbSet<ConflictingMedicines> ConflictingMedicinesDbSet { get; set; }
     
+    public DbSet<CompletedAlarm> CompletedAlarms { get; set; }
+    public DbSet<MissedAlarm> MissedAlarms { get; set; }
+    
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -50,6 +53,24 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         builder.Entity<ConflictingMedicines>().Property(p => p.Medicine1Name).IsRequired();
         builder.Entity<ConflictingMedicines>().Property(p => p.Medicine2Id).IsRequired();
         builder.Entity<ConflictingMedicines>().Property(p => p.Medicine2Name).IsRequired();
+
+        builder.Entity<CompletedAlarm>().ToTable("CompletedAlarms");
+        builder.Entity<CompletedAlarm>().HasKey(p => p.Id);
+        builder.Entity<CompletedAlarm>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<CompletedAlarm>().Property(p => p.MedicineName).IsRequired();
+        builder.Entity<CompletedAlarm>().Property(p => p.ActivateDateString).IsRequired();
+        builder.Entity<CompletedAlarm>().Property(p => p.ActivateHour).IsRequired();
+        builder.Entity<CompletedAlarm>().Property(p => p.ActivateMinute).IsRequired();
+        builder.Entity<CompletedAlarm>().Property(p => p.UserId).IsRequired();
+        
+        builder.Entity<MissedAlarm>().ToTable("MissedAlarms");
+        builder.Entity<MissedAlarm>().HasKey(p => p.Id);
+        builder.Entity<MissedAlarm>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<MissedAlarm>().Property(p => p.MedicineName).IsRequired();
+        builder.Entity<MissedAlarm>().Property(p => p.ActivateDateString).IsRequired();
+        builder.Entity<MissedAlarm>().Property(p => p.ActivateHour).IsRequired();
+        builder.Entity<MissedAlarm>().Property(p => p.ActivateMinute).IsRequired();
+        builder.Entity<MissedAlarm>().Property(p => p.UserId).IsRequired();
         
         builder.Entity<Medicine>().HasMany(p => p.Reminders)
             .WithOne(p => p.Medicine)
