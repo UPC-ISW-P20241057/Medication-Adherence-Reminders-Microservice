@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ziIJXXLlcr3LnYFfj3O5UL6OAobEQt9/VZRxEA/w4l+k69u63DZffzbdn5koop+f0NAF307YnfoECd9t8aMi3Q==",
+  "dgSpecHash": "w1Y/T+ORt+cK9bR49al2vnOOdh6+kzUIN6VItOWTNHCuhDn3yeXd7PeM6H2hCEHjdd34wg/UVo0mo65WgxEzPA==",
   "success": true,
-  "projectFilePath": "D:\\9no ciclo\\Taller de proyecto 1\\desarollo\\medication net\\MedicationAdherenceMicroservice\\MedicationAdherenceMicroservice.csproj",
+  "projectFilePath": "D:\\10mo ciclo\\taller de proyecto 2\\desarrollo\\medication api\\MedicationAdherenceMicroservice\\MedicationAdherenceMicroservice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mauricio\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Mauricio\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.5\\microsoft.aspnetcore.openapi.8.0.5.nupkg.sha512",
